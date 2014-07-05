@@ -75,7 +75,7 @@ $ew_form->drawText('X' , 40 , 182 );	// Declined
 $ew_form->drawText('X' , 40 , 173 );	// Not Asked
 $ew_form->drawText('X' , 40 , 157.5 );	// Additional
 
-//$ew_form->drawText('Something Else' , 40 , 157.5 );	// Additional Detail
+$ew_form->drawText('Something Else' , 120 , 157.5 );	// Additional Detail
 
 $ew_form->drawText('X' , 170 , 197 );	// Transgender MTF
 $ew_form->drawText('X' , 170 , 189 );	// Transgender FTM
@@ -90,6 +90,7 @@ $ew_form->drawText('X' , 40 , 74 );	// Declined
 $ew_form->drawText('X' , 40 , 66 );	// Not Asked
 
 // Self-Reported Result
+
 $ew_form->drawText('X' , 100.75 , 86 );	// Positive
 $ew_form->drawText('X' , 100.75 , 78 );	// Negative
 $ew_form->drawText('X' , 100.75 , 70 );	// Preliminary Positive
