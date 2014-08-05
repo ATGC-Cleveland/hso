@@ -10,7 +10,7 @@
 use ZendPdf\PdfDocument;
 use ZendPdf\Font;
 
-$pdf = PdfDocument::load('/Users/thingwone/Sites/healthspotohio/wp-content/plugins/champ-lite4hiv/docs/ew_2014v2_part1.pdf');
+$pdf = PdfDocument::load('/Users/thingwone/Sites/healthspotohio/wp-content/plugins/piras5/docs/ew_2014v2_part1.pdf');
 //var_dump($pdf->pages);
 
 $ew_form = $pdf->pages[0];
@@ -329,15 +329,21 @@ $ew_form->drawText( '02' , 463 , 148.5 );	// RF.2
 $ew_form->drawText( '03' , 510 , 148.5 );	// RF.3
 $ew_form->drawText( '04' , 556 , 148.5 );	// RF.4
 
-$data = $pdf->render();
+$dir = wp_upload_dir();
+
+$pdf->save( $dir['basedir'] . '/pdf/opscan_' . date("Y-m-d-H-i") . '.pdf' );
 // instruct browser to download the PDF
-header("Content-Type: application/pdf");
-header("Content-Disposition: inline; filename=opscan-". date("Y-m-d-H-i") . ".pdf");
-header('Content-Transfer-Encoding: binary');
-header("Cache-Control: no-cache, must-revalidate");
+//header("Content-Type: application/pdf");
+//header("Content-Disposition: inline; filename=opscan-". date("Y-m-d-H-i") . ".pdf");
+//header('Content-Transfer-Encoding: binary');
+//header("Cache-Control: no-cache, must-revalidate");
 
 
 // output the PDF
-echo $data;
+//echo $data;
+
+var_dump( $dir );
+
+
 
 ?>
